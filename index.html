@@ -1,26 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>LetChat开通指南（仅hz内部使用，对外无效）</title>
+    <meta charset="UTF-8">
+    <title>LetChat</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: Arial, sans-serif;
             margin: 0;
+            padding: 0;
         }
-        .content {
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .step-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .step-text {
             text-align: center;
+            margin-top: -20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: darkblue;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                height: auto;
+                padding: 20px;
+            }
+
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <img src="letchat_pay.jpg" alt="图片">
-        <p>Step1: 扫码支付5元</p>
-        <p>Step2: 填写需求登记表：</p>
-        <p>Step3: 联系谢明加入飞书群（自愿）</p>
+<div class="container">
+    <div class="step">
+        <img class="step-image" src="image1.jpg" alt="Step 1: 支付">
+        <div class="step-text">
+            <h2>Step 1: 支付</h2>
+            <p>微信支付￥5后，截图</p>
+        </div>
     </div>
+    <div class="step">
+        <img class="step-image" src="image2.jpg" alt="Step 2: 填表">
+        <div class="step-text">
+            <h2>Step 2: 填表</h2>
+            <p>获取RID后，扫码填续期表</p>
+        </div>
+    </div>
+    <div class="step">
+        <img class="step-image" src="image3.jpg" alt="Step 3: 加群">
+        <div class="step-text">
+            <h2>Step 3: 加群</h2>
+            <p>联系谢明加飞书群（自愿）</p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
